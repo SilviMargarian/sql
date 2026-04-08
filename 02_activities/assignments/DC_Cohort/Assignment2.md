@@ -56,7 +56,8 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 2 would be the architecture that retains the changes, meanwhile type 1 overwrites old data with new data. 
+For the type 2, CUSTOMER_ADDRESS table could contain attributes such as address, start_date, and end_date. Since there are start and end dates of using a given address, we could keep adding a new address without losing information about the old address. For the type 1, CUSTOMER_ADDRESS table would not have these dates, so each time that a customer changes their address, this information is overwritten.
 ```
 
 ***
@@ -187,9 +188,11 @@ Read: Boykis, V. (2019, October 16). _Neural nets are just people all the way do
 
 **What are some of the ethical issues important to this story?**
 
-Consider, for example, concepts of labour, bias, LLM proliferation, moderating content, intersection of technology and society, ect. 
+Consider, for example, concepts of labour, bias, LLM proliferation, moderating content, intersection of technology and society, etc. 
 
 
 ```
-Your thoughts...
+I found it interesting how it requires heavy human labor such as image labeling, to train the machine to recognize items. Many think that machines make our lives easy and are even capable of replacing people in some sectors. However, there is a lot of manual labor involved to get to that stage. Since it requires so much work, the manual workers are often recruited from underdeveloped countries such as Kenya and Venezuela. These are educated but unemployed individuals that are actively seeking a job to sustain themselves and their families. However, there are reports of these people getting taken advantage of by the big tech companies in America; they are underpaid and overworked. From my own experience, I know how physically hard it is to do manual scoring. For my project, I have to count neurons in different brain regions. Since there are many cells, I was initially planning to rely on machine learning tools; all I needed to do was to train the machine how a cell looks like using images of real cells. However, even after the training, the machine still couldn't reliably identify all cells (for example, it would count a block of clustered cells as one cell). Now, I have to manually count every cell in each image (there can be anywhere between 1500-2000 cells in an image), which is very hard on my eyes sometimes. 
+
+There is also a lot of subjectivity involved in manual labeling. As it was stated in the article, some of the labels are inappropriate and wrong. If someone happens to be biased against certain groups of people or has a certain worldview, which is very likely considering there is a certain group of people that are more likely to get hired than others, they would label images accordingly. Since the machine is not perfect, these labels may be exarcebated further, which raises ethical concerns. 
 ```
